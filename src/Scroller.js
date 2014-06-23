@@ -14,22 +14,22 @@
 
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['exports', './Animate'], factory);
-    } else if (typeof exports === 'object') {
+        // AMD
+        define(['module', './Animate'], factory);
+    } else if (typeof module === 'object') {
         // CommonJS
-        factory(exports, require('./Animate'));
+        factory(module, require('./Animate'));
     } else {
         // Browser globals
         factory((root.Scroller = {}), root.Animate);
     }
-}(this, function (exports, Animate) {
+}(this, function (module, Animate) {
     var NOOP = function () {};
 
     /**
      * A pure logic 'component' for 'virtual' scrolling/zooming.
      */
-    exports.Scroller = function (callback, options) {
+    module.exports = function (callback, options) {
         this.__callback = callback;
 
         this.options = {
@@ -112,7 +112,7 @@
     };
 
 
-    exports.Scroller.prototype = {
+    module.exports.prototype = {
 
         /*
           ---------------------------------------------------------------------------
