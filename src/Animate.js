@@ -146,7 +146,7 @@
      * @param verifyCallback {Function} Executed before every animation step.
      *   Signature of the method should be `function() { return continueWithAnimation; }`
      * @param completedCallback {Function}
-     *   Signature of the method should be `function(droppedFrames, finishedAnimation) {}`
+     *   Signature of the method should be `function(droppedFrames, finishedAnimation, optional wasFinished) {}`
      * @param duration {Integer} Milliseconds to run the animation
      * @param easingMethod {Function} Pointer to easing function
      *   Signature of the method should be `function(percent) { return modifiedValue; }`
@@ -187,7 +187,7 @@
             if (!running[id] || (verifyCallback && !verifyCallback(id))) {
 
                 running[id] = null;
-                completedCallback && completedCallback(desiredFrames - (dropCounter / ((now - start) / millisecondsPerSecond)), id, false);
+                completedCallback(desiredFrames - (dropCounter / ((now - start) / millisecondsPerSecond)), id, false);
                 return;
 
             }
@@ -216,7 +216,7 @@
             var value = easingMethod ? easingMethod(percent) : percent;
             if ((stepCallback(value, now, render) === false || percent === 1) && render) {
                 running[id] = null;
-                completedCallback && completedCallback(desiredFrames - (dropCounter / ((now - start) / millisecondsPerSecond)), id, percent === 1 || duration == null);
+                completedCallback(desiredFrames - (dropCounter / ((now - start) / millisecondsPerSecond)), id, percent === 1 || duration === undefined);
             } else if (render) {
                 lastFrame = now;
                 exports.requestAnimationFrame(step, root);
