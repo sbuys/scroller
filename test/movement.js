@@ -45,10 +45,10 @@ describe("Movement", function () {
         assert.equal(typeof scroller, "object");        
         scroller.setDimensions(1000, 600, 5000, 5000);
         scroller.scrollTo(300, 500);
-        var coordinates = scroller.getCoordinates(1200, 800);
+        var coordinates = scroller.getPoint(1200, 800);
 
         scroller.zoomTo(2.0, false, 1200-300, 800-500);
-        var newCoordinates = scroller.getCoordinates(2400, 1600);
+        var newCoordinates = scroller.getPoint(2400, 1600);
 
         assert.equal(newCoordinates.left, coordinates.left);
         assert.equal(newCoordinates.top, coordinates.top);

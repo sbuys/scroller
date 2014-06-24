@@ -65,14 +65,14 @@ describe("Events", function () {
         scroller.zoomTo(1);
         scroller.scrollTo(300, 400);
 
-        var coordinates = scroller.getCoordinates(300+200, 400+200);
+        var coordinates = scroller.getPoint(300+200, 400+200);
         scroller.doMouseZoom(-3, null, 200, 200);
         scroller.doMouseZoom(-3, null, 200, 200);
         scroller.doMouseZoom(-3, null, 200, 200);
         scroller.doMouseZoom(-3, null, 200, 200);
 
         var k = 1.03 * 1.03 * 1.03 * 1.03;
-        var newCoordinates = scroller.getCoordinates(k*(300+200), k*(400+200));
+        var newCoordinates = scroller.getPoint(k*(300+200), k*(400+200));
         assert.ok(numericEqual(coordinates.left, newCoordinates.left));
         assert.ok(numericEqual(coordinates.top, newCoordinates.top));
         assert.ok(numericEqual(values.zoom, 1.03 * 1.03 * 1.03 * 1.03));
