@@ -1,6 +1,6 @@
 {
   "name": "scroller",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Accelerated panning and zooming for HTML and Canvas",
   "main": "index.js",
   "directories": {
@@ -14,9 +14,6 @@
     "url": "https://github.com/popham/scroller.git"
   },
   "keywords": [
-    "AMD",
-    "UMD",
-    "CommonJS",
     "Scrolling",
     "Scroll",
     "Scroller",
