@@ -1,0 +1,31 @@
+{
+  "name": "scroller",
+  "main": "index.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/popham/scroller",
+  "authors": [
+    "Tim Popham <popham@uw.edu>"
+  ],
+  "description": "Accelerated panning and zooming for HTML and Canvas",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "Scrolling",
+    "Scroll",
+    "Scroller",
+    "Touch"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "package.json",
+    "demo"
+  ]
+}
