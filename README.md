@@ -1,7 +1,10 @@
-Zynga Scroller
-==============
+Scroller
+========
 
-A pure logic component for scrolling/zooming. It is independent of any specific kind of rendering or event system. 
+A pure logic component for scrolling/zooming.
+It is independent of any specific kind of rendering or event system.
+Scroller has been forked from [ZyngaScroller](https://github.com/zynga/scroller/) to incorporate UMD support.
+Pull-to-refresh has been removed from this fork.
 
 The "demo" folder contains examples for usage with DOM and Canvas renderings which works both, on mouse and touch driven devices.
 
@@ -9,7 +12,7 @@ The "demo" folder contains examples for usage with DOM and Canvas renderings whi
 Demos
 -----
 
-See our demos online here: http://zynga.github.com/scroller/
+See [ZyngaScroller](https://github.com/zynga/scroller/)'s original demos here: http://popham.github.com/scroller/
 
 
 Features
@@ -28,7 +31,8 @@ Features
 Options
 -------
 
-These are the available options with their defaults. Options can be modified using the second constructor parameter or during runtime by modification of `scrollerObj.options.optionName`.
+These are the available options with their defaults.
+Options can be modified using the second constructor parameter or during runtime by modification of `scrollerObj.options.optionName`.
 
 * scrollingX = `true`
 * scrollingY = `true`
@@ -45,7 +49,10 @@ These are the available options with their defaults. Options can be modified usi
 Usage
 -----
 
-Callback (first parameter of constructor) is required. Options are optional. Defaults are listed above. The created instance must have proper dimensions using a `setDimensions()` call. Afterwards you can pass in event data or manually control scrolling/zooming via the API.
+Callback (first parameter of constructor) is required. Options are optional.
+Defaults are listed above.
+The created instance must have proper dimensions using a `setDimensions()` call.
+Afterwards you can pass in event data or manually control scrolling/zooming via the API.
 
 ```js
 var scrollerObj = new Scroller(function(left, top, zoom) {
@@ -63,19 +70,25 @@ Public API
 
 * Setup scroll object dimensions.  
   `scrollerObj.setDimensions(clientWidth, clientHeight, contentWidth, contentHeight);`
-* Setup scroll object position (in relation to the document). Required for zooming to event position (mousewheel, touchmove).  
+* Setup scroll object position (in relation to the document).
+  Required for zooming to event position (mousewheel, touchmove).  
   `scrollerObj.setPosition(clientLeft, clientTop);`
 * Setup snap dimensions (only needed when `snapping` is enabled)  
   `scrollerObj.setSnapSize(width, height);`
-* Setup pull-to-refresh. Height of the info region plus three callbacks which are executed on the different stages.  
+* Setup pull-to-refresh.
+  Height of the info region plus three callbacks which are executed on the different stages.  
   `scrollerObj.activatePullToRefresh(height, activate, deactivate, start);`
-* Stop pull-to-refresh session. Called inside the logic started by start callback for activatePullToRefresh call.  
+* Stop pull-to-refresh session.
+  Called inside the logic started by start callback for activatePullToRefresh call.  
   `scrollerObj.finishPullToRefresh();`
 * Get current scroll positions and zooming.  
   `scrollerObj.getValues() => { left, top, zoom }`
-* Zoom to a specific level. Origin defines the pixel position where zooming should centering to. Defaults to center of scrollerObj.  
+* Zoom to a specific level.
+  Origin defines the pixel position where zooming should centering to.
+  Defaults to center of scrollerObj.  
   `scrollerObj.zoomTo(level, animate ? false, originLeft ? center, originTop ? center)`
-* Zoom by a given amount. Same as `zoomTo` but by a relative value.  
+* Zoom by a given amount.
+  Same as `zoomTo` but by a relative value.  
   `scrollerObj.zoomBy(factor, animate ? false, originLeft ? center, originTop ? center);`
 * Scroll to a specific position.  
   `scrollerObj.scrollTo(left, top, animate ? false);`
@@ -92,7 +105,8 @@ This API part can be used to pass event data to the `scrollerObj` to react on us
 * `doTouchMove(touches, timeStamp, scale)`
 * `doTouchEnd(timeStamp)`
 
-For a touch device just pass the native `touches` event data to the doTouch* methods. On mouse systems one can emulate this data using an array with just one element:
+For a touch device just pass the native `touches` event data to the doTouch* methods.
+On mouse systems one can emulate this data using an array with just one element:
 
 * Touch device: `doTouchMove(e.touches, e.timeStamp);`
 * Mouse device: `doTouchMove([e], e.timeStamp);`
