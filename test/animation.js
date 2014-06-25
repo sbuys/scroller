@@ -63,8 +63,8 @@ describe("Animation", function () {
             assert.equal(values.zoom, 2);
 
             var max = scroller.getScrollMax();
-            assert.equal(max.left, (5000 - 1000)*2);
-            assert.equal(max.top, (5000 - 600)*2);
+            assert.equal(max.left, 5000*2 - 1000);
+            assert.equal(max.top, 5000*2 - 600);
 
             done();
         }, 1000);

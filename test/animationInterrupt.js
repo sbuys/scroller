@@ -53,8 +53,8 @@ describe("Mixed animation and static movement", function () {
 
             // Scroll max has values based on final zoom
             var max = scroller.getScrollMax();
-            assert.equal(max.left, (5000 - 1000)*2);
-            assert.equal(max.top, (5000 - 600)*2);
+            assert.equal(max.left, 5000*2 - 1000);
+            assert.equal(max.top, 5000*2 - 600);
         }, 500);
     });
 
