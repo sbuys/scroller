@@ -4,7 +4,7 @@ Scroller
 A pure logic component for scrolling/zooming.
 It is independent of any specific kind of rendering or event system.
 Scroller has been forked from [ZyngaScroller](https://github.com/zynga/scroller/) to incorporate UMD support.
-Pull-to-refresh has been removed from this fork.
+Pull-to-refresh and EasyScroll have been removed from this fork.
 
 The "demo" folder contains examples for usage with DOM and Canvas renderings which works both, on mouse and touch driven devices.
 
