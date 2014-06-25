@@ -22,13 +22,13 @@ describe("Initialization", function () {
 
     it("should accept dimensions", function() {
         var scroller = new Scroller();
-        assert.equal(typeof scroller, "object");        
+        assert.equal(typeof scroller, "object");
         scroller.setDimensions(1000, 600, 5000, 5000);
     });
 
     it("should recall accepted dimensions", function() {
         var scroller = new Scroller();
-        assert.equal(typeof scroller, "object");        
+        assert.equal(typeof scroller, "object");
         scroller.setDimensions(1000, 600, 5000, 5000);
         var values = scroller.getValues();
         assert.equal(typeof values, "object");

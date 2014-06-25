@@ -108,7 +108,7 @@ describe("Overlapping animation", function (done) {
                 // Zoom level has not finalized
                 assert.equal(values.left, 300);
                 assert.equal(values.top, 400);
-                assert.notEqual(values.zoom, 2);                
+                assert.notEqual(values.zoom, 2);
 
                 done();
             }, 1000);

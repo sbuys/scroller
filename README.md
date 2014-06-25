@@ -71,24 +71,24 @@ Public API
 * Setup scroll object dimensions.  
   `scrollerObj.setDimensions(clientWidth, clientHeight, contentWidth, contentHeight);`
 * Setup scroll object position (in relation to the document).
-  Required for zooming to event position (mousewheel, touchmove).  
+  Required for zooming to event position (mousewheel, touchmove).
   `scrollerObj.setPosition(clientLeft, clientTop);`
 * Setup snap dimensions (only needed when `snapping` is enabled)  
   `scrollerObj.setSnapSize(width, height);`
 * Setup pull-to-refresh.
-  Height of the info region plus three callbacks which are executed on the different stages.  
+  Height of the info region plus three callbacks which are executed on the different stages.
   `scrollerObj.activatePullToRefresh(height, activate, deactivate, start);`
 * Stop pull-to-refresh session.
-  Called inside the logic started by start callback for activatePullToRefresh call.  
+  Called inside the logic started by start callback for activatePullToRefresh call.
   `scrollerObj.finishPullToRefresh();`
 * Get current scroll positions and zooming.  
   `scrollerObj.getValues() => { left, top, zoom }`
 * Zoom to a specific level.
   Origin defines the pixel position where zooming should centering to.
-  Defaults to center of scrollerObj.  
+  Defaults to center of scrollerObj.
   `scrollerObj.zoomTo(level, animate ? false, originLeft ? center, originTop ? center)`
 * Zoom by a given amount.
-  Same as `zoomTo` but by a relative value.  
+  Same as `zoomTo` but by a relative value.
   `scrollerObj.zoomBy(factor, animate ? false, originLeft ? center, originTop ? center);`
 * Scroll to a specific position.  
   `scrollerObj.scrollTo(left, top, animate ? false);`

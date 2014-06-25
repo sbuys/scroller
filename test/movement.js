@@ -4,7 +4,7 @@ var assert = require('assert');
 describe("Movement", function () {
     it("should follow scrolling", function() {
         var scroller = new Scroller();
-        assert.equal(typeof scroller, "object");        
+        assert.equal(typeof scroller, "object");
         scroller.setDimensions(1000, 600, 5000, 5000);
         scroller.scrollTo(300, 500);
 
@@ -17,7 +17,7 @@ describe("Movement", function () {
 
     it("should follow zooming", function() {
         var scroller = new Scroller(null, { zooming : true });
-        assert.equal(typeof scroller, "object");        
+        assert.equal(typeof scroller, "object");
         scroller.setDimensions(1000, 600, 5000, 5000);
         scroller.zoomTo(2.45);
 
@@ -28,7 +28,7 @@ describe("Movement", function () {
 
     it("should follow composed zooming and scrolling", function() {
         var scroller = new Scroller(null, { zooming : true });
-        assert.equal(typeof scroller, "object");        
+        assert.equal(typeof scroller, "object");
         scroller.setDimensions(1000, 600, 5000, 5000);
         scroller.zoomTo(1.7);
         scroller.scrollTo(300, 500);
@@ -42,7 +42,7 @@ describe("Movement", function () {
 
     it("should follow composed scrolling and zooming", function () {
         var scroller = new Scroller(null, { zooming : true });
-        assert.equal(typeof scroller, "object");        
+        assert.equal(typeof scroller, "object");
         scroller.setDimensions(1000, 600, 5000, 5000);
         scroller.scrollTo(300, 500);
         var coordinates = scroller.getPoint(1200, 800);
@@ -56,7 +56,7 @@ describe("Movement", function () {
 
     it("should follow composed scrolling and zooming without an explicit zoom origin", function() {
         var scroller = new Scroller(null, { zooming : true });
-        assert.equal(typeof scroller, "object");        
+        assert.equal(typeof scroller, "object");
         scroller.setDimensions(1000, 600, 5000, 5000);
         scroller.scrollTo(300, 500);
         scroller.zoomTo(1.7);
@@ -77,7 +77,7 @@ describe("Movement", function () {
 
     it("should compose scrolling, zooming, and then scrolling", function() {
         var scroller = new Scroller(null, { zooming : true });
-        assert.equal(typeof scroller, "object");        
+        assert.equal(typeof scroller, "object");
         scroller.setDimensions(1000, 600, 5000, 5000);
         scroller.scrollTo(300, 500);
         scroller.zoomTo(1.7);
