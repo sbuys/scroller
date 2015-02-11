@@ -1,6 +1,6 @@
 {
-  "name": "scroller",
-  "version": "0.0.2",
+  "name": "reapp-scroller",
+  "version": "1.0.0",
   "description": "Accelerated panning and zooming for HTML and Canvas",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/popham/scroller.git"
+    "url": "https://github.com/reapp/reapp-scroller.git"
   },
   "keywords": [
     "Scrolling",
@@ -22,9 +22,9 @@
   "author": "Tim Popham",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/popham/scroller/issues"
+    "url": "https://github.com/reapp/reapp-scroller/issues"
   },
-  "homepage": "https://github.com/popham/scroller",
+  "homepage": "https://github.com/reapp/reapp-scroller",
   "devDependencies": {
     "mocha": "^1.20.1"
   }

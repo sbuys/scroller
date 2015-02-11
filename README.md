@@ -1,16 +1,18 @@
 Scroller
 ========
 
-Reapp changes:
-  - easing
-  - minSnapSpeed
+Scroller has been forked from [popham](https://github.com/popham/scroller/)
+which was forked from [Zynga](https://github.com/zynga/scroller/).
 
-A pure logic component for scrolling/zooming.
-It is independent of any specific kind of rendering or event system.
-Scroller has been forked from [ZyngaScroller](https://github.com/zynga/scroller/) to incorporate UMD support.
-Pull-to-refresh and EasyScroll have been removed from this fork.
+Popham removed Pull-to-refresh and EasyScroll.
 
-The "demo" folder contains examples for usage with DOM and Canvas renderings which works both, on mouse and touch driven devices.
+Reapp has moved to commonjs, added easing functions, and reduced friction on paging.
+
+### Goals
+
+- More configurable
+- Remove some minor bugs we've found
+- Performance & simplicty
 
 
 Demos
