@@ -6,7 +6,11 @@ which was forked from [Zynga](https://github.com/zynga/scroller/).
 
 Popham removed Pull-to-refresh and EasyScroll.
 
-Reapp has moved to commonjs, added easing functions, and reduced friction on paging.
+Reapp has:
+ - Uses only commonjs
+ - added easing functions
+ - reduced friction on paging
+ - removed requestanimationframe polyfill
 
 ### Goals
 
