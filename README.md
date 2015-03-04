@@ -11,6 +11,7 @@ Reapp has:
  - added easing functions
  - reduced friction on paging
  - removed requestanimationframe polyfill
+ - added pagingDecelleration: bool option
 
 ### Goals
 
