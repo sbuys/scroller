@@ -1,5 +1,5 @@
 {
-  "name": "reapp-scroller",
+  "name": "scroller",
   "version": "1.0.8",
   "description": "Accelerated panning and zooming for HTML and Canvas",
   "main": "index.js",
